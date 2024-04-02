@@ -1,0 +1,23 @@
+
+stages:
+  - transfer_images
+
+transfer_images_job:
+  stage: transfer_images
+  script:
+    - python3 -m ensurepip --upgrade
+    - python3 -m pip install --user requests
+    - python3 scripts/transfer_images_source_to_target.py
+  when: manual
+
+variables:
+  SOURCE_PROJECT_PATH: "project/my_project-dev"
+  DEST_PROJECT_PATH: "project/my_project"
+  SOURCE_GROUP: "teams/kolios"
+  DEST_GROUP: "teams/kolios-ext"
+  SOURCE_REGISTRY: "gitlab.kolios.gr"
+  DEST_REGISTRY: "gitlab.kolios-external.com"
+  GITLAB_API_SOURCE: "https://gitlab.kolios.gr/api/v4"
+  GITLAB_API_DEST: "https://gitlab.kolios-external.com/api/v4"
+  IMAGE_SOURCE_PORT: "5000"
+  IMAGE_TARGET_PORT: "5000"
