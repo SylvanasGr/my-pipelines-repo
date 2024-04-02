@@ -16,6 +16,7 @@ Centralize and organize pipelines for streamlined DevOps operations, promoting c
 Contributions welcome! Fork, make changes, and submit a pull request.
 
 # License
-MIT License
+[MIT License](https://github.com/SylvanasGr/my-pipelines-repo/blob/master/LICENSE)
+
 
 Feel free to adjust the content further to suit your preferences or provide additional details as needed.
